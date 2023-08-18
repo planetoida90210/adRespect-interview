@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenu = document.getElementById('closeMenu');
 
+    //togle search input
+
     searchIcon.addEventListener('click', function () {
         if (searchInput.classList.contains('w-0')) {
             searchInput.classList.remove('w-0');
@@ -15,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
             searchInput.classList.add('w-0');
         }
     });
+
+    //togle mobile menu
 
     menuToggle.addEventListener('click', function () {
         mobileMenu.classList.remove('opacity-0', 'invisible');
@@ -27,5 +31,18 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             mobileMenu.classList.add('invisible');
         }, 300);
+    });
+
+    // close mobile menu and href to link
+
+    const menuLinks = document.querySelectorAll('.menu-link');
+    menuLinks.forEach((link) => {
+        link.addEventListener('click', function () {
+            mobileMenu.classList.remove('opacity-100');
+            mobileMenu.classList.add('opacity-0');
+            setTimeout(() => {
+                mobileMenu.classList.add('invisible');
+            }, 300);
+        });
     });
 });
