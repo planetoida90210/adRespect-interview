@@ -77,34 +77,48 @@
             <!-- Mobile Menu -->
             <div class="md:hidden flex items-center">
                 <button id="menuToggle">
-                    <div class="bg-black h-1 w-5 mb-1"></div>
-                    <div class="bg-black h-1 w-5 mb-1"></div>
-                    <div class="bg-black h-1 w-5"></div>
+                    <div class="bg-black h-[3px] w-4 mb-[3px]"></div>
+                    <div class="bg-black h-[3px] w-4 mb-[3px]"></div>
+                    <div class="bg-black h-[3px] w-4"></div>
                 </button>
             </div>
         </nav>
         <div
             id="mobileMenu"
-            class="fixed top-0 left-0 w-full h-full bg-white opacity-0 invisible transition-all duration-300 ease-in-out z-50 flex flex-col justify-center items-center"
+            class="fixed top-0 left-0 w-full h-full bg-white opacity-0 invisible transition-all duration-300 ease-in-out z-50"
         >
-            <div id="closeMenu" class="absolute top-4 right-4 cursor-pointer">
-                <div class="bg-black h-1 w-5 mb-1 transform rotate-45"></div>
-                <div class="bg-black h-1 w-5 transform -rotate-45"></div>
+            <div class="flex h-[72px] justify-between items-center p-4 px-6">
+                <img
+                    src="assets/logo.svg"
+                    alt="giarddesign logo"
+                    class="h-[19px] w-auto"
+                />
+
+                <div id="closeMenu" class="cursor-pointer relative w-5 h-5">
+                    <div
+                        class="bg-black absolute h-1 w-5 top-1/2 left-0 transform -translate-y-1/2 rotate-45"
+                    ></div>
+                    <div
+                        class="bg-black absolute h-1 w-5 top-1/2 left-0 transform -translate-y-1/2 -rotate-45"
+                    ></div>
+                </div>
             </div>
-            <ul>
-                <li class="mb-4 text-xl cursor-pointer">
-                    <a href="#offer">Oferta</a>
-                </li>
-                <li class="mb-4 text-xl cursor-pointer">
-                    <a href="#about" class="menu-link">O firmie</a>
-                </li>
-                <li class="mb-4 text-xl cursor-pointer">
-                    <a href="#projects" class="menu-link"> Realizacje </a>
-                </li>
-                <li class="mb-4 text-xl cursor-pointer">
-                    <a href="#contact" class="menu-link"> Kontakt </a>
-                </li>
-            </ul>
+            <div class="flex flex-col items-center pt-[130px] h-full">
+                <ul class="flex flex-col space-y-[62px]">
+                    <li class="text-xl cursor-pointer">
+                        <a class="menu-link" href="#offer">Oferta</a>
+                    </li>
+                    <li class="text-xl cursor-pointer">
+                        <a href="#about" class="menu-link">O firmie</a>
+                    </li>
+                    <li class="text-xl cursor-pointer">
+                        <a href="#projects" class="menu-link"> Realizacje </a>
+                    </li>
+                    <li class="text-xl cursor-pointer">
+                        <a href="#contact" class="menu-link"> Kontakt </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <section id="slider">slider</section>
         <section class="h-screen" id="offer">oferta</section>
