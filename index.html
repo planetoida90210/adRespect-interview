@@ -10,7 +10,14 @@
             rel="stylesheet"
         />
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="main.js" defer></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+            rel="stylesheet"
+        />
+
+        <script src="main.js" type="module" defer></script>
         <link rel="stylesheet" href="styles.css" />
         <title>giarddesign</title>
     </head>
@@ -264,7 +271,9 @@
         </section>
 
         <!-- Sekcja Oferta -->
-        <section class="px-10 py-8 flex flex-col justify-center items-center">
+        <section
+            class="px-10 py-8 flex flex-col justify-center items-center pb-[160px]"
+        >
             <div class="md:w-[709px] pt-[120px] flex flex-col items-stretch">
                 <h2 class="montserrat text-[48px] items-stretch">
                     Działamy kompleksowo
@@ -348,8 +357,69 @@
             </div>
         </section>
 
-        <section class="h-screen" id="about">o firmie</section>
-        <section class="h-screen" id="projects">realizacje</section>
+        <section id="about" class="relative md:flex md:h-[720px] h-screen">
+            <!-- Tło zdjęciowe -->
+            <div
+                class="absolute inset-0 bg-cover md:static md:w-1/2 z-0"
+                style="
+                    background-image: url('https://s3-alpha-sig.figma.com/img/df39/9fbc/7d2d02daccea22da3a5cc9d56fd014d8?Expires=1693180800&Signature=fJnfLcIiub-i7So4CTgwbn-4Y6xuWChfY9zfs6Vv0szLyvWcr3g33w2E5nb7LQtx8TMfNh459yuFkaMQCEHPQGsQNZjUVZLtb1pPCpG7t1MR8CWx5USM964cpDfb6ggIGZ-xfxoZcnpobeZDxF2AO4PBOyIBm2GR5cjDjJKYF7sX4x47HGYCHhMKBkPJwKN~3bnqz0lD7~iycwuaEzRa7RwhpSzstAmWHh~rlt7L4J-F0Tb1-nXGAPTdjmBrFnMN87xR0b5fe688iBCkc9fWqwnOztYaakg8Y2U9Bid3F-0hQKltlqbFMXkbPlQGixWaIN4YzkKRpL4Yg1sFJHcmxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+                "
+            ></div>
+
+            <!-- Warstwa z zielonym tłem i tekstem -->
+            <div
+                class="absolute inset-0 bg-[#1B5B31] bg-opacity-25 md:bg-opacity-100 h-full md:relative md:w-1/2 md:h-full p-6 md:p-16 flex flex-col justify-center items-start z-10"
+            >
+                <h2 class="text-[#F5F0EC] text-2xl mb-4">
+                    Tworzymy <br />
+                    z pasją
+                </h2>
+                <p class="text-[#F5F0EC] mb-6">
+                    Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                    wykwalifikowani projektanci oraz architekci, których
+                    zadaniem jest rozpoznanie i realizacja potrzeb każdego
+                    Klienta. Nasza specjalizacja to przestrzenie nowoczesne,
+                    które charakteryzuje minimalizm, geometria i elegancka
+                    prostota. Tworzymy ogrody małoobsługowe, dostosowane do
+                    współczesnego trybu życia.
+                </p>
+                <button
+                    class="btn flex items-center text-[#F5F0EC] border-[#F5F0EC] py-2 px-4 rounded-full hover:bg-opacity-40 hover:bg-[#F5F0EC] hover:text-[#1B5B31]"
+                >
+                    Poznaj nas bliżej
+                    <span class="ml-2">➔</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="h-screen bg-[#DCC1AB] relative" id="projects">
+            <!-- Tutaj będzie kontener na obrazy -->
+            <div id="imageContainer"></div>
+
+            <!-- Przycisk 'Rozwiń' -->
+            <div class="absolute bottom-10 w-full text-center">
+                <button
+                    id="expandBtn"
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-white text-black rounded-full border border-black"
+                >
+                    Rozwiń
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="{2}"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </section>
         <section class="h-screen" id="contact">kontakt</section>
     </body>
 </html>

@@ -1,4 +1,52 @@
+import { fetchImages } from './fetchImages.js';
+
+let imagesArray = [];
+let currentDisplayCount = 8;
+
+async function loadImages(count = 8) {
+    const newImages = await fetchImages('japanese modern garden design', count);
+    imagesArray = [...imagesArray, ...newImages];
+    console.log('Zawartość imagesArray:', imagesArray);
+    displayImages();
+}
+
+function displayImages() {
+    const container = document.querySelector('#imageContainer');
+
+    if (!container) {
+        console.error('Nie znaleziono kontenera #imageContainer');
+        return;
+    }
+
+    // Czyszczenie obrazów
+    container
+        .querySelectorAll('img.gallery-img')
+        .forEach((img) => img.remove());
+
+    for (let i = 0; i < currentDisplayCount && i < imagesArray.length; i++) {
+        const img = document.createElement('img');
+        img.src = imagesArray[i];
+        img.alt = 'Modern Japanese Garden Design';
+        container.appendChild(img);
+        img.classList.add('gallery-img');
+        img.style.width = '200px';
+    }
+
+    new Masonry(container, {
+        itemSelector: 'img',
+        columnWidth: 200,
+        fitWidth: true,
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+    loadImages(8);
+
+    document.querySelector('#expandBtn').addEventListener('click', function () {
+        currentDisplayCount += 8;
+        displayImages();
+    });
+
     const searchIcon = document.getElementById('searchIcon');
     const searchInput = document.getElementById('searchInput');
     const menuToggle = document.getElementById('menuToggle');
@@ -15,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     prevButtons.forEach((button) =>
         button.addEventListener('click', prevSlide),
     );
+
     let currentIndex = 0;
 
     function toggleSearch() {
@@ -49,12 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
         goToSlide((currentIndex - 1 + slides.length) % slides.length);
     }
 
-    document
-        .querySelector('.my-slider-next')
-        .addEventListener('click', nextSlide);
-    document
-        .querySelector('.my-slider-prev')
-        .addEventListener('click', prevSlide);
     searchIcon.addEventListener('click', toggleSearch);
     menuToggle.addEventListener('click', showMobileMenu);
     closeMenu.addEventListener('click', hideMobileMenu);
