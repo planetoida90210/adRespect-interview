@@ -1,16 +1,33 @@
-#mobileMenu {
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+#slider {
+    position: relative;
+    overflow: hidden;
 }
 
-#mobileMenu.active {
-    transform: translateX(0);
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
 }
 
-#menuToggle {
-    z-index: 100; 
- }
+.my-slider-slide {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+}
 
- .invisible {
-    visibility: hidden;
+.my-slider-slide img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.my-slider-prev, .my-slider-next {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.my-slider-prev:hover, .my-slider-next:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
