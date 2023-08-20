@@ -32,12 +32,5 @@
 
 .my-slider-prev, .my-slider-next {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-}
-
-.my-slider-prev:hover, .my-slider-next:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #F5F0EC;
 }

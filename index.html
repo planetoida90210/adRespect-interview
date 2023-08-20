@@ -133,7 +133,7 @@
                 <div class="my-slider-slide flex w-full">
                     <!-- Lewa kolumna -->
                     <div
-                        class="w-1/2 flex flex-col bg-[#DCC1AB] h-full justify-center items-start p-6"
+                        class="w-1/2 flex flex-col bg-[#DCC1AB] h-full justify-center p-6"
                     >
                         <div
                             class="max-w-[599px] flex flex-col mx-auto items-start justify-center"
@@ -153,17 +153,27 @@
                                 z indywidualnym podejściem do każdego projektu.
                             </p>
                             <div
-                                class="flex-col md:flex-row items-center justify-center md:space-x-8"
+                                class="flex flex-col items-center justify-center md:flex-row md:space-x-9 space-y-4 md:space-y-0 wrap"
                             >
                                 <button
-                                    class="bg-[#1B5B31] text-[#F5F0EC] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full transition"
+                                    class="bg-[#1B5B31] text-[#F5F0EC] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full transition w-full md:w-auto"
                                 >
                                     <a href="#contact">Skontaktuj się z nami</a>
                                 </button>
                                 <button
-                                    class="border border-[#1B5B31] text-[#1B5B31] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full"
+                                    class="border border-[#1B5B31] text-[#1B5B31] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full w-full md:w-auto"
                                 >
-                                    <a href="#">Zobacz nasze realizacje</a>
+                                    <a
+                                        class="flex items-center justify-center md:justify-start"
+                                        href="#projects"
+                                    >
+                                        Zobacz nasze realizacje
+                                        <img
+                                            src="/assets/ArrowDown.svg"
+                                            alt="arrow down"
+                                            class="w-3 h-3 ml-2"
+                                        />
+                                    </a>
                                 </button>
                             </div>
                         </div>
@@ -202,17 +212,27 @@
                                 Twoją wizję idealnego ogrodu.
                             </p>
                             <div
-                                class="flex-col md:flex-row items-center justify-center md:space-x-8"
+                                class="flex flex-col items-center justify-center md:flex-row md:space-x-9 space-y-4 md:space-y-0 wrap"
                             >
                                 <button
-                                    class="bg-[#1B5B31] text-[#F5F0EC] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full transition"
+                                    class="bg-[#1B5B31] text-[#F5F0EC] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full transition w-full md:w-auto"
                                 >
                                     <a href="#contact">Skontaktuj się z nami</a>
                                 </button>
                                 <button
-                                    class="border border-[#1B5B31] text-[#1B5B31] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full"
+                                    class="border border-[#1B5B31] text-[#1B5B31] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full w-full md:w-auto"
                                 >
-                                    <a href="#">Zobacz nasze realizacje</a>
+                                    <a
+                                        class="flex items-center justify-center md:justify-start"
+                                        href="#about"
+                                    >
+                                        Dowiedz się o nas więcej
+                                        <img
+                                            src="/assets/ArrowDown.svg"
+                                            alt="arrow down"
+                                            class="w-3 h-3 ml-2"
+                                        />
+                                    </a>
                                 </button>
                             </div>
                         </div>
@@ -229,15 +249,20 @@
                 </div>
             </div>
 
-            <div class="absolute bottom-4 right-4 flex space-x-4">
-                <button class="my-slider-prev">
+            <div class="absolute bottom-0 right-0 flex">
+                <button
+                    class="my-slider-prev py-[16px] pr-[8px] pl-[24px] md:py-[24px] md:pr-[16px] md:pl-[32px]"
+                >
                     <img src="assets/ArrowPrev.svg" alt="Strzałka w lewo" />
                 </button>
-                <button class="my-slider-next">
+                <button
+                    class="my-slider-next py-[16px] pl-[8px] pr-[24px] md:py-[24px] md:pl-[16px] md:pr-[32px]"
+                >
                     <img src="assets/ArrowNext.svg" alt="Strzałka w prawo" />
                 </button>
             </div>
         </section>
+
         <section class="h-screen" id="offer">oferta</section>
         <section class="h-screen" id="about">o firmie</section>
         <section class="h-screen" id="projects">realizacje</section>
