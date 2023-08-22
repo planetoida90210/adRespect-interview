@@ -4,8 +4,17 @@ html {
 
  .snap-container {
     scroll-snap-type: x mandatory;
- }
+ } 
 
+ .snap-start {
+    scroll-snap-align: start;
+  }
+
+  .snap-center {
+    scroll-snap-align: center;
+  }
+
+ 
 .inter {
     font-family: 'Inter', 'sans-serif';
     font-weight: 400;
