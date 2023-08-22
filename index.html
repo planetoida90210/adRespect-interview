@@ -31,7 +31,9 @@
     </head>
     <body class="bg-gray-100 inter text-[#111]">
         <!-- Navigation -->
-        <nav class="bg-white p-4 h-[72px] flex justify-between items-center">
+        <nav
+            class="bg-white p-4 h-[72px] relative z-100000 flex justify-between items-center"
+        >
             <div class="px-6">
                 <img
                     src="assets/logo.svg"
@@ -149,14 +151,14 @@
         <!-- Sekcja Slidera -->
         <section
             id="slider"
-            class="flex overflow-hidden h-full md:h-[737px] items-center justify-center relative"
+            class="flex overflow-x-hidden h-full md:h-[737px] items-center justify-center relative"
         >
             <div class="slider-wrapper h-full w-full">
                 <!-- Slajd 1 -->
-                <div class="my-slider-slide flex w-full">
+                <div class="my-slider-slide flex w-full z-[-1]">
                     <!-- Lewa kolumna -->
                     <div
-                        class="w-1/2 flex flex-col bg-[#DCC1AB] h-full justify-center p-6"
+                        class="w-1/2 z-[-1] flex flex-col bg-[#DCC1AB] h-full justify-center p-6"
                     >
                         <div
                             class="max-w-[599px] flex flex-col mx-auto items-start justify-center"
@@ -203,7 +205,7 @@
                     </div>
 
                     <!-- Prawa kolumna -->
-                    <div class="w-1/2 h-full">
+                    <div class="w-1/2 h-full z-[-1]">
                         <img
                             src="https://s3-alpha-sig.figma.com/img/7f27/7560/5005cc8dea4835ae282958a4c13cc9c0?Expires=1693180800&Signature=X9Awiq-KksIaWVWi3x40BDVYihiFt~lArQU3zIUx9t-KCDG38v390im-gsiwDiQp16FGYQtvxwhn3Rp-qzjrA6dsIg-f3Iv0IEdjpxuOu9hs3bINTJIHfe9eGO~cos8omBlnTo2C1OB2QuIvZWRib1Dj-gTpRPyTVQEPFFRsrklBuqkTRkFSdmbQkaT3FAud~jcLxLmX7iBPmHm0Gd4z8DxOmd0mNvB7PB3iYHZVxxuflGMIOzL8T7MgBwpWAxasSiWQ3M4SrbsKVFiCo1JKWJQHwZ7Pyj9XWt8G~h0z72XaEOLPdMw5IQnFaO63tp70QuWAkwERhoT1ou4ut2P06Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="Opis zdjęcia 1"
@@ -212,10 +214,10 @@
                     </div>
                 </div>
                 <!-- Slajd 2 -->
-                <div class="my-slider-slide flex w-full">
+                <div class="my-slider-slide flex w-full z-[-1]">
                     <!-- Lewa kolumna -->
                     <div
-                        class="w-1/2 flex flex-col bg-[#DCC1AB] h-full justify-center items-start p-6"
+                        class="w-1/2 flex z-[-1] flex-col bg-[#DCC1AB] h-full justify-center items-start p-6"
                     >
                         <div
                             class="max-w-[599px] flex flex-col mx-auto items-start justify-center"
@@ -262,7 +264,7 @@
                     </div>
 
                     <!-- Prawa kolumna -->
-                    <div class="w-1/2 h-full">
+                    <div class="w-1/2 h-full z-[-1]">
                         <img
                             src="https://s3-alpha-sig.figma.com/img/df39/9fbc/7d2d02daccea22da3a5cc9d56fd014d8?Expires=1693180800&Signature=fJnfLcIiub-i7So4CTgwbn-4Y6xuWChfY9zfs6Vv0szLyvWcr3g33w2E5nb7LQtx8TMfNh459yuFkaMQCEHPQGsQNZjUVZLtb1pPCpG7t1MR8CWx5USM964cpDfb6ggIGZ-xfxoZcnpobeZDxF2AO4PBOyIBm2GR5cjDjJKYF7sX4x47HGYCHhMKBkPJwKN~3bnqz0lD7~iycwuaEzRa7RwhpSzstAmWHh~rlt7L4J-F0Tb1-nXGAPTdjmBrFnMN87xR0b5fe688iBCkc9fWqwnOztYaakg8Y2U9Bid3F-0hQKltlqbFMXkbPlQGixWaIN4YzkKRpL4Yg1sFJHcmxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                             alt="Opis zdjęcia 2"
@@ -386,11 +388,11 @@
             <div
                 class="absolute inset-0 bg-[#1B5B31] bg-opacity-25 md:bg-opacity-100 h-full md:relative md:w-1/2 md:h-full p-6 md:p-16 flex flex-col justify-center items-start z-10"
             >
-                <h2 class="text-[#F5F0EC] text-2xl mb-4">
+                <h2 class="montserrat text-[#F5F0EC] text-[48px] mb-4">
                     Tworzymy <br />
                     z pasją
                 </h2>
-                <p class="text-[#F5F0EC] mb-6">
+                <p class="text-[#F5F0EC] text-[16px] font-light mb-6">
                     Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
                     wykwalifikowani projektanci oraz architekci, których
                     zadaniem jest rozpoznanie i realizacja potrzeb każdego
@@ -400,7 +402,7 @@
                     współczesnego trybu życia.
                 </p>
                 <button
-                    class="btn flex text-[#F5F0EC] border-[#F5F0EC] py-2 px-4 rounded-full hover:bg-opacity-40 hover:bg-[#F5F0EC] hover:text-[#1B5B31]"
+                    class="btn flex text-[#F5F0EC] border border-[#F5F0EC] py-2 px-4 rounded-full"
                 >
                     Poznaj nas bliżej
                     <span class="ml-2">➔</span>
