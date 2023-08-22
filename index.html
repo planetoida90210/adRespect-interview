@@ -11,6 +11,10 @@
         />
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css"
+        />
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"
             integrity="sha512-dSI4QnNeaXiNEjX2N8bkb16B7aMu/8SI5/rE6NIa3Hr/HnWUO+EAZpizN2JQJrXuvU7z0HTgpBVk/sfGd0oW+w=="
@@ -396,82 +400,146 @@
             class="w-full min-h-screen bg-[#DCC1AB] pt-32 relative"
             id="projects"
         >
-            <h2 class="text-center mb-8">Nasze projekty</h2>
+            <h2
+                class="flex justify-center md:justify-start md:ml-[160px] mb-[96px] montserrat text-[38px] md:text-[48px]"
+            >
+                Nasze projekty
+            </h2>
 
             <div
                 class="masonry grid grid-cols-1 md:grid-cols-3 gap-8 pb-32 items-center"
             >
                 <div class="masonry-item">
-                    <img
-                        src="https://images.unsplash.com/photo-1658180952728-8e84083ecb73?..."
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://images.unsplash.com/photo-1658180952728-8e84083ecb73?..."
+                        data-src="https://images.unsplash.com/photo-1658180952728-8e84083ecb73?..."
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1658180952728-8e84083ecb73?..."
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://images.unsplash.com/photo-1671358959785-95ff472071b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://images.unsplash.com/photo-1671358959785-95ff472071b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                        data-src="https://images.unsplash.com/photo-1671358959785-95ff472071b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1671358959785-95ff472071b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://images.unsplash.com/photo-1514053026555-49ce8886ae41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://images.unsplash.com/photo-1514053026555-49ce8886ae41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                        data-src="https://images.unsplash.com/photo-1514053026555-49ce8886ae41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1514053026555-49ce8886ae41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://images.unsplash.com/photo-1611299065064-0a0edc037dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=982&q=80"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://images.unsplash.com/photo-1611299065064-0a0edc037dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=982&q=80"
+                        data-src="https://images.unsplash.com/photo-1611299065064-0a0edc037dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=982&q=80"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1611299065064-0a0edc037dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=982&q=80"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://images.unsplash.com/photo-1616281677557-a40d9d9ece5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://images.unsplash.com/photo-1616281677557-a40d9d9ece5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        data-src="https://images.unsplash.com/photo-1616281677557-a40d9d9ece5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1616281677557-a40d9d9ece5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://images.unsplash.com/photo-1539145632639-c13729854e15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://images.unsplash.com/photo-1539145632639-c13729854e15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        data-src="https://images.unsplash.com/photo-1539145632639-c13729854e15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1539145632639-c13729854e15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://images.unsplash.com/photo-1535689077097-a8726b5ff822?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://images.unsplash.com/photo-1535689077097-a8726b5ff822?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                        data-src="https://images.unsplash.com/photo-1535689077097-a8726b5ff822?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1535689077097-a8726b5ff822?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://images.unsplash.com/photo-1582413662709-55e2f2af3574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://images.unsplash.com/photo-1582413662709-55e2f2af3574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                        data-src="https://images.unsplash.com/photo-1582413662709-55e2f2af3574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1582413662709-55e2f2af3574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://s3-alpha-sig.figma.com/img/5d1c/d9b9/1e56bc0d14c22b0ac5b9ae8e2bfbd5d1?Expires=1693785600&Signature=drFolPSpvfBM5kaC5GMCBVgdDoZb9BFWvsdCKuLBZeHwOwLuaaVG98L-fRzVbI90Rl7XaVzNxK9G-ujhCcpUsD32ULOw5B7NJro-yuMi2dTPc4alrRutWciZ7XljfcMb6tH5wXw3kcW9vZPrNJYf616-rTPuzPWGRAdmPMgMoVyk2sOr5rhgSeNFzsB2QsHrS1HsDm-ltESs7tJOoFFxRI0dA~fV~3nEHr6GszTK6fhHXMEBAtlxcSVRZRKXyuN~6jvMh4b2CBh63ooicT7z5hRwN2Ve0ULhTtvkwUiL9A-AAbxxWMQMoFFrb~sHWgf4-rh2K5WogMGTnv2hB4mmjw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://s3-alpha-sig.figma.com/img/5d1c/d9b9/1e56bc0d14c22b0ac5b9ae8e2bfbd5d1?Expires=1693785600&Signature=drFolPSpvfBM5kaC5GMCBVgdDoZb9BFWvsdCKuLBZeHwOwLuaaVG98L-fRzVbI90Rl7XaVzNxK9G-ujhCcpUsD32ULOw5B7NJro-yuMi2dTPc4alrRutWciZ7XljfcMb6tH5wXw3kcW9vZPrNJYf616-rTPuzPWGRAdmPMgMoVyk2sOr5rhgSeNFzsB2QsHrS1HsDm-ltESs7tJOoFFxRI0dA~fV~3nEHr6GszTK6fhHXMEBAtlxcSVRZRKXyuN~6jvMh4b2CBh63ooicT7z5hRwN2Ve0ULhTtvkwUiL9A-AAbxxWMQMoFFrb~sHWgf4-rh2K5WogMGTnv2hB4mmjw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        data-src="https://s3-alpha-sig.figma.com/img/5d1c/d9b9/1e56bc0d14c22b0ac5b9ae8e2bfbd5d1?Expires=1693785600&Signature=drFolPSpvfBM5kaC5GMCBVgdDoZb9BFWvsdCKuLBZeHwOwLuaaVG98L-fRzVbI90Rl7XaVzNxK9G-ujhCcpUsD32ULOw5B7NJro-yuMi2dTPc4alrRutWciZ7XljfcMb6tH5wXw3kcW9vZPrNJYf616-rTPuzPWGRAdmPMgMoVyk2sOr5rhgSeNFzsB2QsHrS1HsDm-ltESs7tJOoFFxRI0dA~fV~3nEHr6GszTK6fhHXMEBAtlxcSVRZRKXyuN~6jvMh4b2CBh63ooicT7z5hRwN2Ve0ULhTtvkwUiL9A-AAbxxWMQMoFFrb~sHWgf4-rh2K5WogMGTnv2hB4mmjw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    >
+                        <img
+                            src="https://s3-alpha-sig.figma.com/img/5d1c/d9b9/1e56bc0d14c22b0ac5b9ae8e2bfbd5d1?Expires=1693785600&Signature=drFolPSpvfBM5kaC5GMCBVgdDoZb9BFWvsdCKuLBZeHwOwLuaaVG98L-fRzVbI90Rl7XaVzNxK9G-ujhCcpUsD32ULOw5B7NJro-yuMi2dTPc4alrRutWciZ7XljfcMb6tH5wXw3kcW9vZPrNJYf616-rTPuzPWGRAdmPMgMoVyk2sOr5rhgSeNFzsB2QsHrS1HsDm-ltESs7tJOoFFxRI0dA~fV~3nEHr6GszTK6fhHXMEBAtlxcSVRZRKXyuN~6jvMh4b2CBh63ooicT7z5hRwN2Ve0ULhTtvkwUiL9A-AAbxxWMQMoFFrb~sHWgf4-rh2K5WogMGTnv2hB4mmjw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://s3-alpha-sig.figma.com/img/24d7/efa5/a3c1f2854e87a31e5a248352efa0b04f?Expires=1693785600&Signature=LAgEvdtebFCXKnBxtfkf2F1JN~QqGcwxsnv7OAsa1L4Uusxc9KheRS-iKWXWO0YvXSmw~Rg5TSz4Cu82~S0gVmZYmx0Lns4QsPXg6uH7I6IHUaF12IcbNIxMJfVBdqOZ37FQxst43m4vqBDtmCglcestMCIolIC8sCbs6MbKjOKf2galr8X8Q2Zgiaenbqn5K101QehBs-95H-qKF5PjkoIYoj-R3RI86vKFjzjKyo2tbC5v8JgTRllfots7z7VPKvq~xfBLPY3xjBIikBVWE0SqXHk2lWNSg0uNkldXpT8bXHO6hel8YPd6XJUOfB7rSx8YWyYECTfx0QiijxRLdA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://s3-alpha-sig.figma.com/img/24d7/efa5/a3c1f2854e87a31e5a248352efa0b04f?Expires=1693785600&Signature=LAgEvdtebFCXKnBxtfkf2F1JN~QqGcwxsnv7OAsa1L4Uusxc9KheRS-iKWXWO0YvXSmw~Rg5TSz4Cu82~S0gVmZYmx0Lns4QsPXg6uH7I6IHUaF12IcbNIxMJfVBdqOZ37FQxst43m4vqBDtmCglcestMCIolIC8sCbs6MbKjOKf2galr8X8Q2Zgiaenbqn5K101QehBs-95H-qKF5PjkoIYoj-R3RI86vKFjzjKyo2tbC5v8JgTRllfots7z7VPKvq~xfBLPY3xjBIikBVWE0SqXHk2lWNSg0uNkldXpT8bXHO6hel8YPd6XJUOfB7rSx8YWyYECTfx0QiijxRLdA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        data-src="https://s3-alpha-sig.figma.com/img/24d7/efa5/a3c1f2854e87a31e5a248352efa0b04f?Expires=1693785600&Signature=LAgEvdtebFCXKnBxtfkf2F1JN~QqGcwxsnv7OAsa1L4Uusxc9KheRS-iKWXWO0YvXSmw~Rg5TSz4Cu82~S0gVmZYmx0Lns4QsPXg6uH7I6IHUaF12IcbNIxMJfVBdqOZ37FQxst43m4vqBDtmCglcestMCIolIC8sCbs6MbKjOKf2galr8X8Q2Zgiaenbqn5K101QehBs-95H-qKF5PjkoIYoj-R3RI86vKFjzjKyo2tbC5v8JgTRllfots7z7VPKvq~xfBLPY3xjBIikBVWE0SqXHk2lWNSg0uNkldXpT8bXHO6hel8YPd6XJUOfB7rSx8YWyYECTfx0QiijxRLdA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    >
+                        <img
+                            src="https://s3-alpha-sig.figma.com/img/24d7/efa5/a3c1f2854e87a31e5a248352efa0b04f?Expires=1693785600&Signature=LAgEvdtebFCXKnBxtfkf2F1JN~QqGcwxsnv7OAsa1L4Uusxc9KheRS-iKWXWO0YvXSmw~Rg5TSz4Cu82~S0gVmZYmx0Lns4QsPXg6uH7I6IHUaF12IcbNIxMJfVBdqOZ37FQxst43m4vqBDtmCglcestMCIolIC8sCbs6MbKjOKf2galr8X8Q2Zgiaenbqn5K101QehBs-95H-qKF5PjkoIYoj-R3RI86vKFjzjKyo2tbC5v8JgTRllfots7z7VPKvq~xfBLPY3xjBIikBVWE0SqXHk2lWNSg0uNkldXpT8bXHO6hel8YPd6XJUOfB7rSx8YWyYECTfx0QiijxRLdA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://s3-alpha-sig.figma.com/img/b00a/962e/56d48c9ca8fcabcc720d50ff6bafca47?Expires=1693785600&Signature=EGPKngi5oxkzBNYz7n~UpejiZvMvUGs5N0AvYfBjIRgDgM4h0yeqMdQs4k7GRyb1RarmtHH6gXSjLSLCIix9f2FyzQvku8ghD5poFlZVeymO~Y7VCMgs5RAXO3AhF7FdrqcsqUEzYRB6mYnQplUdBJJbEmK5Jrya2e9UrEckfoL6RoPiFCb~jPN~gdiTw9r6S4yx1YWK5unS2SyqXbLNoTkDgovIR8bhHHISt-rPrGbJgWfoMY0hIziMikoPiAq2Xyr0kAG6lDpcL5RHXezjpTLdfPg6NMaEUGo7IrOfYYGC5kve3N88fFV-5fnlBDmLlAq9W9Ao34zOQx3wpky1Aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://s3-alpha-sig.figma.com/img/b00a/962e/56d48c9ca8fcabcc720d50ff6bafca47?Expires=1693785600&Signature=EGPKngi5oxkzBNYz7n~UpejiZvMvUGs5N0AvYfBjIRgDgM4h0yeqMdQs4k7GRyb1RarmtHH6gXSjLSLCIix9f2FyzQvku8ghD5poFlZVeymO~Y7VCMgs5RAXO3AhF7FdrqcsqUEzYRB6mYnQplUdBJJbEmK5Jrya2e9UrEckfoL6RoPiFCb~jPN~gdiTw9r6S4yx1YWK5unS2SyqXbLNoTkDgovIR8bhHHISt-rPrGbJgWfoMY0hIziMikoPiAq2Xyr0kAG6lDpcL5RHXezjpTLdfPg6NMaEUGo7IrOfYYGC5kve3N88fFV-5fnlBDmLlAq9W9Ao34zOQx3wpky1Aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        data-src="https://s3-alpha-sig.figma.com/img/b00a/962e/56d48c9ca8fcabcc720d50ff6bafca47?Expires=1693785600&Signature=EGPKngi5oxkzBNYz7n~UpejiZvMvUGs5N0AvYfBjIRgDgM4h0yeqMdQs4k7GRyb1RarmtHH6gXSjLSLCIix9f2FyzQvku8ghD5poFlZVeymO~Y7VCMgs5RAXO3AhF7FdrqcsqUEzYRB6mYnQplUdBJJbEmK5Jrya2e9UrEckfoL6RoPiFCb~jPN~gdiTw9r6S4yx1YWK5unS2SyqXbLNoTkDgovIR8bhHHISt-rPrGbJgWfoMY0hIziMikoPiAq2Xyr0kAG6lDpcL5RHXezjpTLdfPg6NMaEUGo7IrOfYYGC5kve3N88fFV-5fnlBDmLlAq9W9Ao34zOQx3wpky1Aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    >
+                        <img
+                            src="https://s3-alpha-sig.figma.com/img/b00a/962e/56d48c9ca8fcabcc720d50ff6bafca47?Expires=1693785600&Signature=EGPKngi5oxkzBNYz7n~UpejiZvMvUGs5N0AvYfBjIRgDgM4h0yeqMdQs4k7GRyb1RarmtHH6gXSjLSLCIix9f2FyzQvku8ghD5poFlZVeymO~Y7VCMgs5RAXO3AhF7FdrqcsqUEzYRB6mYnQplUdBJJbEmK5Jrya2e9UrEckfoL6RoPiFCb~jPN~gdiTw9r6S4yx1YWK5unS2SyqXbLNoTkDgovIR8bhHHISt-rPrGbJgWfoMY0hIziMikoPiAq2Xyr0kAG6lDpcL5RHXezjpTLdfPg6NMaEUGo7IrOfYYGC5kve3N88fFV-5fnlBDmLlAq9W9Ao34zOQx3wpky1Aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
                 <div class="masonry-item">
-                    <img
-                        src="https://s3-alpha-sig.figma.com/img/e595/eff0/256fb3185fa1a312c58e3e6d0335d0a5?Expires=1693785600&Signature=De6dQFZqx9idMtM6aR5eeIwx2oW6HGYJ9NNGke1EmDkLA5Ay9LSGtreXOo3oi-sPn87xuwuwKbWicuiArqFz0AMMXlB-DpoW85jfthJTUL7NqhYNIQjx59EKzp00d5a-h3OQmqivkTRNYJTMcM7g~nhD6yoW3iKvayFY7UYOEuqOBrWZKzTgbIDnocrt5c1VngciCwFtq26405pO0ejo~El7qzsow1kDcIpmBNULK8c3IGAgnQdOCSYQGTRUOxQxDsZsWeNHUrXDmiB1cZupCwFQt0oeBEXx2aWVn6FF8CgO9bDcRdf0Uw97PGtFVAxK7IHvdE-6YEgSTcfjsgntfA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt="Zdjęcie projektu"
-                    />
+                    <a
+                        href="https://s3-alpha-sig.figma.com/img/e595/eff0/256fb3185fa1a312c58e3e6d0335d0a5?Expires=1693785600&Signature=De6dQFZqx9idMtM6aR5eeIwx2oW6HGYJ9NNGke1EmDkLA5Ay9LSGtreXOo3oi-sPn87xuwuwKbWicuiArqFz0AMMXlB-DpoW85jfthJTUL7NqhYNIQjx59EKzp00d5a-h3OQmqivkTRNYJTMcM7g~nhD6yoW3iKvayFY7UYOEuqOBrWZKzTgbIDnocrt5c1VngciCwFtq26405pO0ejo~El7qzsow1kDcIpmBNULK8c3IGAgnQdOCSYQGTRUOxQxDsZsWeNHUrXDmiB1cZupCwFQt0oeBEXx2aWVn6FF8CgO9bDcRdf0Uw97PGtFVAxK7IHvdE-6YEgSTcfjsgntfA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        data-src="https://s3-alpha-sig.figma.com/img/e595/eff0/256fb3185fa1a312c58e3e6d0335d0a5?Expires=1693785600&Signature=De6dQFZqx9idMtM6aR5eeIwx2oW6HGYJ9NNGke1EmDkLA5Ay9LSGtreXOo3oi-sPn87xuwuwKbWicuiArqFz0AMMXlB-DpoW85jfthJTUL7NqhYNIQjx59EKzp00d5a-h3OQmqivkTRNYJTMcM7g~nhD6yoW3iKvayFY7UYOEuqOBrWZKzTgbIDnocrt5c1VngciCwFtq26405pO0ejo~El7qzsow1kDcIpmBNULK8c3IGAgnQdOCSYQGTRUOxQxDsZsWeNHUrXDmiB1cZupCwFQt0oeBEXx2aWVn6FF8CgO9bDcRdf0Uw97PGtFVAxK7IHvdE-6YEgSTcfjsgntfA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    >
+                        <img
+                            src="https://s3-alpha-sig.figma.com/img/e595/eff0/256fb3185fa1a312c58e3e6d0335d0a5?Expires=1693785600&Signature=De6dQFZqx9idMtM6aR5eeIwx2oW6HGYJ9NNGke1EmDkLA5Ay9LSGtreXOo3oi-sPn87xuwuwKbWicuiArqFz0AMMXlB-DpoW85jfthJTUL7NqhYNIQjx59EKzp00d5a-h3OQmqivkTRNYJTMcM7g~nhD6yoW3iKvayFY7UYOEuqOBrWZKzTgbIDnocrt5c1VngciCwFtq26405pO0ejo~El7qzsow1kDcIpmBNULK8c3IGAgnQdOCSYQGTRUOxQxDsZsWeNHUrXDmiB1cZupCwFQt0oeBEXx2aWVn6FF8CgO9bDcRdf0Uw97PGtFVAxK7IHvdE-6YEgSTcfjsgntfA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="Zdjęcie projektu"
+                        />
+                    </a>
                 </div>
             </div>
             <div class="relative pb-[50px] z-10">
@@ -488,6 +556,87 @@
                 id="fadeEffect"
             ></div>
         </section>
-        <section class="h-screen" id="contact">kontakt</section>
+
+        <section
+            class="bg-white flex justify-center items-center h-auto py-[60px]"
+            id="contact"
+        >
+            <div
+                class="bg-[#1B5B31] w-3/4 px-[120px] py-[110px] h-3/4 flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-center"
+            >
+                <p class="montserrat text-[#F5F0EC] text-xl md:text-3xl">
+                    Zostańmy w kontakcie!<br />
+                    Znajdziesz nas na Instagramie
+                </p>
+
+                <div class="flex flex-col items-center mt-8">
+                    <p class="text-xs mb-2 text-white">
+                        Śledź nasze <br />
+                        najnowsze realizacje!
+                    </p>
+                    <button
+                        class="bg-[#F5F0EC] text-[#1B5B31] px-5 py-2 rounded-full font-light"
+                    >
+                        Instagram
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-[#111] text-[#F5F0EC] py-8 px-6 md:py-10 md:px-20">
+            <div class="mx-auto max-h-[500px]">
+                <div class="flex justify-between items-center mb-10">
+                    <img
+                        src="assets/giarddesign.svg"
+                        alt="giarddesign logo"
+                        class="h-[19px]"
+                    />
+
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-center space-x-5"
+                    >
+                        <p class="text-xs font-light pb-2">
+                            Daj znać, co możemy dla Ciebie zrobić!
+                        </p>
+                        <button
+                            class="bg-[#1B5B31] text-[#F5F0EC] px-[24px] py-[14px] rounded-full text-sm"
+                        >
+                            Skontaktuj się z nami
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hidden md:block bg-[#F5F0EC] h-px my-[62px]"></div>
+
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center mb-[30px] md:mb-28"
+                >
+                    <div class="flex space-x-5 mb-6 md:mb-0">
+                        <p>Instagram</p>
+                        <p>LinkedIn</p>
+                        <p>Facebook</p>
+                        <p>Kontakt</p>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row justify-center items-center space-x-2"
+                    >
+                        <p>000-000-000</p>
+                        <p>giarddesign@kontakt.pl</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <p class="text-xs font-light">Prawa zastrzeżone © 2022</p>
+                    <div class="flex items-center justify-center space-x-2">
+                        <p class="text-xs">made by</p>
+                        <img
+                            src="assets/logoFullLight.svg"
+                            alt="Full Logo"
+                            class="h-[23px]"
+                        />
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

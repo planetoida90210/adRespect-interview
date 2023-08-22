@@ -13,13 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const expandBtn = document.getElementById('expandButton');
     const masonryContainer = document.querySelector('.masonry');
 
+    lightGallery(masonryContainer, {
+        selector: '.masonry-item a',
+    });
+
     let currentIndex = 0;
 
     const msnry = new Masonry(masonryContainer, {
         itemSelector: '.masonry-item',
         columnWidth: 100,
         percentPosition: true,
-        gutter: 8,
+        gutter: 12,
     });
 
     masonryItems.forEach((item, index) => {
@@ -67,10 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
             expandBtn.style.display = 'none';
             fadeEffect.style.display = 'none';
         }
-    });
-
-    lightGallery(masonryContainer, {
-        selector: '.masonry-item',
     });
 
     const toggleSearch = () => {
