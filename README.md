@@ -5,7 +5,7 @@ Cześć! 👋 Dziękuję za zajrzenie do mojego projektu napisanego na potrzeby 
 # 🌐 Link do Strony
 
 Aby zobaczyć projekt na żywo, kliknij poniższy link:
-`[adRespect-ProjektRekrutacyjny](https://ad-respect-interview-michal-bryk.vercel.app/)`
+[adRespect-ProjektRekrutacyjny](https://ad-respect-interview-michal-bryk.vercel.app/)
 
 # 🛠 Technologie
 
