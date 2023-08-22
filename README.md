@@ -2,6 +2,11 @@
 
 Cześć! 👋 Dziękuję za zajrzenie do mojego projektu napisanego na potrzeby rekrutacji w firmie adRespect.
 
+# 🌐 Link do Strony
+
+Aby zobaczyć projekt na żywo, kliknij poniższy link:
+`[adRespect-ProjektRekrutacyjny](https://ad-respect-interview-michal-bryk.vercel.app/)`
+
 # 🛠 Technologie
 
 Projekt został stworzony wyłącznie przy użyciu:
