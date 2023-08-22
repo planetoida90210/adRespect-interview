@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenu = document.getElementById('closeMenu');
+    const mobileMenuLinks = document.querySelectorAll('.menu-link');
     const slides = document.querySelectorAll('.my-slider-slide');
     const sliderWrapper = document.querySelector('.slider-wrapper');
     const nextButtons = document.querySelectorAll('.my-slider-next');
@@ -12,6 +13,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const fadeEffect = document.querySelector('#fadeEffect');
     const expandBtn = document.getElementById('expandButton');
     const masonryContainer = document.querySelector('.masonry');
+    const typewriterText = document.querySelector('.typewriter-text');
+    const text = typewriterText.getAttribute('data-text');
+    let index = 0;
+    let started = false;
+
+    function type() {
+        if (!started) return;
+
+        if (index < text.length) {
+            typewriterText.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 30);
+        }
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                started = true;
+                type();
+                observer.disconnect();
+            }
+        });
+    });
+
+    const aboutSection = document.querySelector('#about');
+    observer.observe(aboutSection);
 
     lightGallery(masonryContainer, {
         selector: '.masonry-item a',
@@ -108,6 +136,9 @@ document.addEventListener('DOMContentLoaded', function () {
     searchIcon.addEventListener('click', toggleSearch);
     menuToggle.addEventListener('click', showMobileMenu);
     closeMenu.addEventListener('click', hideMobileMenu);
+    mobileMenuLinks.forEach((link) => {
+        link.addEventListener('click', hideMobileMenu);
+    });
     nextButtons.forEach((button) =>
         button.addEventListener('click', nextSlide),
     );

@@ -56,9 +56,22 @@ html {
     overflow: hidden;
 }
 
+
 .masonry-item img {
     max-width: 450px;
     height: auto;
     display: block;
     object-fit: cover;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.typewriter-text::after {
+    content: '|';
+    opacity: 1;
+    animation: blink 1s infinite;
 }

@@ -47,7 +47,7 @@
                 <li
                     class="relative group animate__animated animate__slideInDown"
                 >
-                    <a href="#" class="flex items-center space-x-2">
+                    <a href="#offer" class="flex items-center space-x-2">
                         <span>Oferta</span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -155,10 +155,10 @@
         >
             <div class="slider-wrapper h-full w-full">
                 <!-- Slajd 1 -->
-                <div class="my-slider-slide flex w-full z-[-1]">
+                <div class="my-slider-slide flex w-full">
                     <!-- Lewa kolumna -->
                     <div
-                        class="w-1/2 z-[-1] flex flex-col bg-[#DCC1AB] h-full justify-center p-6"
+                        class="w-1/2 flex flex-col bg-[#DCC1AB] h-full justify-center p-6"
                     >
                         <div
                             class="max-w-[599px] flex flex-col mx-auto items-start justify-center"
@@ -181,12 +181,12 @@
                                 class="flex flex-col items-center justify-center md:flex-row md:space-x-9 space-y-4 md:space-y-0 wrap"
                             >
                                 <button
-                                    class="bg-[#1B5B31] text-[#F5F0EC] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full transition w-full md:w-auto"
+                                    class="bg-[#1B5B31] hover:bg-[#146826] text-[#F5F0EC] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full transition w-full md:w-auto"
                                 >
                                     <a href="#contact">Skontaktuj się z nami</a>
                                 </button>
                                 <button
-                                    class="border border-[#1B5B31] text-[#1B5B31] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full w-full md:w-auto"
+                                    class="border border-[#1B5B31] text-[#1B5B31] hover:scale-105 pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full w-full md:w-auto transition"
                                 >
                                     <a
                                         class="flex items-center justify-center md:justify-start"
@@ -240,12 +240,12 @@
                                 class="flex flex-col items-center justify-center md:flex-row md:space-x-9 space-y-4 md:space-y-0 wrap"
                             >
                                 <button
-                                    class="bg-[#1B5B31] text-[#F5F0EC] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full transition w-full md:w-auto"
+                                    class="bg-[#1B5B31] hover:bg-[#146826] text-[#F5F0EC] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full transition w-full md:w-auto"
                                 >
                                     <a href="#contact">Skontaktuj się z nami</a>
                                 </button>
                                 <button
-                                    class="border border-[#1B5B31] text-[#1B5B31] pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full w-full md:w-auto"
+                                    class="border border-[#1B5B31] text-[#1B5B31] hover:scale-105 pt-2 px-4 pb-2 text-xs md:pt-[12px] md:px-6 md:pb-[14px] rounded-full w-full md:w-auto transition"
                                 >
                                     <a
                                         class="flex items-center justify-center md:justify-start"
@@ -290,6 +290,7 @@
 
         <!-- Sekcja Oferta -->
         <section
+            id="offer"
             class="px-10 py-8 flex flex-col justify-center items-center pb-[160px]"
         >
             <div class="md:w-[709px] pt-[120px] flex flex-col items-stretch">
@@ -310,7 +311,7 @@
             >
                 <!-- Karta 1 -->
                 <div
-                    class="card bg-white w-[378px] min-w-[340px] h-[370px] p-10 rounded-xl hover:shadow-lg transform transition-transform duration-300 hover:scale-105 flex flex-col"
+                    class="card bg-white w-[378px] min-w-[340px] h-[370px] p-10 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-2.5 transition-all duration-300 flex flex-col"
                 >
                     <img
                         src="/assets/ProjectIcon.svg"
@@ -331,7 +332,7 @@
                 </div>
                 <!-- Karta 2 -->
                 <div
-                    class="card bg-white w-[378px] min-w-[340px] h-[370px] p-10 rounded-xl hover:shadow-lg transform transition-transform duration-300 hover:scale-105 flex flex-col"
+                    class="card bg-white w-[378px] min-w-[340px] h-[370px] p-10 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-2.5 transition-all duration-300 flex flex-col"
                 >
                     <img
                         src="/assets/VisualiseIcon.svg"
@@ -353,7 +354,7 @@
 
                 <!-- Karta 3 -->
                 <div
-                    class="card bg-white w-[378px] min-w-[340px] h-[370px] p-10 rounded-xl hover:shadow-lg transform transition-transform duration-300 hover:scale-105 flex flex-col"
+                    class="card bg-white w-[378px] min-w-[340px] h-[370px] p-10 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-2.5 transition-all duration-300 flex flex-col"
                 >
                     <img
                         src="/assets/RealizationIcon.svg"
@@ -384,25 +385,21 @@
                 "
             ></div>
 
-            <!-- Warstwa z zielonym tłem i tekstem -->
             <div
-                class="absolute inset-0 bg-[#1B5B31] bg-opacity-25 md:bg-opacity-100 h-full md:relative md:w-1/2 md:h-full p-6 md:p-16 flex flex-col justify-center items-start z-10"
+                class="absolute inset-0 bg-[#1B5B31] bg-opacity-25 md:bg-opacity-100 h-full md:relative md:w-1/2 md:h-full p-6 md:p-16 flex flex-col justify-center items-start z-10 max-w-[600px]"
             >
                 <h2 class="montserrat text-[#F5F0EC] text-[48px] mb-4">
                     Tworzymy <br />
                     z pasją
                 </h2>
                 <p class="text-[#F5F0EC] text-[16px] font-light mb-6">
-                    Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
-                    wykwalifikowani projektanci oraz architekci, których
-                    zadaniem jest rozpoznanie i realizacja potrzeb każdego
-                    Klienta. Nasza specjalizacja to przestrzenie nowoczesne,
-                    które charakteryzuje minimalizm, geometria i elegancka
-                    prostota. Tworzymy ogrody małoobsługowe, dostosowane do
-                    współczesnego trybu życia.
+                    <span
+                        class="typewriter-text"
+                        data-text="Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia."
+                    ></span>
                 </p>
                 <button
-                    class="btn flex text-[#F5F0EC] border border-[#F5F0EC] py-2 px-4 rounded-full"
+                    class="btn flex text-[#F5F0EC] border border-[#F5F0EC] py-2 px-4 rounded-full hover:scale-105 transition"
                 >
                     Poznaj nas bliżej
                     <span class="ml-2">➔</span>
@@ -411,7 +408,7 @@
         </section>
 
         <section
-            class="w-full min-h-screen bg-[#DCC1AB] pt-32 relative"
+            class="w-full min-h-screen bg-[#DCC1AB] pt-32 flex-col relative"
             id="projects"
         >
             <h2
@@ -556,6 +553,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="relative pb-[50px] z-10">
                 <button
                     class="block mx-auto expand-btn mt-4 px-[22px] py-[14px] rounded-full w-[125px] border border-[#111] text-[#111] font-light"
