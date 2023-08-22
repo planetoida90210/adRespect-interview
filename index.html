@@ -13,6 +13,10 @@
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
         <link
             rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link
+            rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css"
         />
         <script
@@ -32,13 +36,15 @@
                 <img
                     src="assets/logo.svg"
                     alt="giarddesign logo"
-                    class="h-[19px] w-auto"
+                    class="h-[19px] w-auto animate__animated animate__fadeIn"
                 />
             </div>
 
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6 items-center">
-                <li class="relative group">
+                <li
+                    class="relative group animate__animated animate__slideInDown"
+                >
                     <a href="#" class="flex items-center space-x-2">
                         <span>Oferta</span>
                         <svg
@@ -58,7 +64,7 @@
                     </a>
 
                     <div
-                        class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg hidden group-hover:block"
+                        class="absolute z-100 left-0 mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg hidden group-hover:block animate__animated animate__fadeIn"
                     >
                         <a href="#" class="block px-4 py-2 text-sm">Oferta 1</a>
                         <a href="#" class="block px-4 py-2 text-sm">Oferta 2</a>
@@ -66,10 +72,16 @@
                         <a href="#" class="block px-4 py-2 text-sm">Oferta 4</a>
                     </div>
                 </li>
-                <li><a href="#">O firmie</a></li>
-                <li><a href="#">Realizacje</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li>
+                <li class="animate__animated animate__slideInDown">
+                    <a href="#about">O firmie</a>
+                </li>
+                <li class="animate__animated animate__slideInDown">
+                    <a href="#projects">Realizacje</a>
+                </li>
+                <li class="animate__animated animate__slideInDown">
+                    <a href="#contact">Kontakt</a>
+                </li>
+                <li class="animate__animated animate__slideInDown">
                     <div class="flex items-center space-x-2">
                         <input
                             type="text"
@@ -80,7 +92,7 @@
                         <img
                             id="searchIcon"
                             src="assets/searchIcon.svg"
-                            class="h-[24px] w-[24px]"
+                            class="h-[24px] w-[24px] animate__animated animate__zoomIn"
                         />
                     </div>
                 </li>
@@ -137,7 +149,7 @@
         <!-- Sekcja Slidera -->
         <section
             id="slider"
-            class="overflow-hidden flex h-full md:h-[737px] items-center justify-center relative"
+            class="flex overflow-hidden h-full md:h-[737px] items-center justify-center relative"
         >
             <div class="slider-wrapper h-full w-full">
                 <!-- Slajd 1 -->
@@ -556,7 +568,7 @@
                 id="fadeEffect"
             ></div>
         </section>
-
+        <!-- #contact -->
         <section
             class="bg-white flex justify-center items-center h-auto py-[60px]"
             id="contact"
@@ -582,7 +594,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- Footer -->
         <footer class="bg-[#111] text-[#F5F0EC] py-8 px-6 md:py-10 md:px-20">
             <div class="mx-auto max-h-[500px]">
                 <div class="flex justify-between items-center mb-10">
