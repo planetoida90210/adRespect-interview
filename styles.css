@@ -4,9 +4,9 @@
 }
 
 .montserrat {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-   }
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
 
 #slider {
     position: relative;
@@ -46,12 +46,16 @@
     z-index: 1;
 }
 
-.gallery-img {
-    transition: transform 0.3s;
-    cursor: pointer;
-    margin-bottom: 10px; 
+.masonry-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.gallery-img:hover {
-    transform: scale(1.1);
+.masonry-item img {
+    max-width: 450px;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }

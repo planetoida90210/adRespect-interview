@@ -1,52 +1,4 @@
-import { fetchImages } from './fetchImages.js';
-
-let imagesArray = [];
-let currentDisplayCount = 8;
-
-async function loadImages(count = 8) {
-    const newImages = await fetchImages('japanese modern garden design', count);
-    imagesArray = [...imagesArray, ...newImages];
-    console.log('Zawartość imagesArray:', imagesArray);
-    displayImages();
-}
-
-function displayImages() {
-    const container = document.querySelector('#imageContainer');
-
-    if (!container) {
-        console.error('Nie znaleziono kontenera #imageContainer');
-        return;
-    }
-
-    // Czyszczenie obrazów
-    container
-        .querySelectorAll('img.gallery-img')
-        .forEach((img) => img.remove());
-
-    for (let i = 0; i < currentDisplayCount && i < imagesArray.length; i++) {
-        const img = document.createElement('img');
-        img.src = imagesArray[i];
-        img.alt = 'Modern Japanese Garden Design';
-        container.appendChild(img);
-        img.classList.add('gallery-img');
-        img.style.width = '200px';
-    }
-
-    new Masonry(container, {
-        itemSelector: 'img',
-        columnWidth: 200,
-        fitWidth: true,
-    });
-}
-
 document.addEventListener('DOMContentLoaded', function () {
-    loadImages(8);
-
-    document.querySelector('#expandBtn').addEventListener('click', function () {
-        currentDisplayCount += 8;
-        displayImages();
-    });
-
     const searchIcon = document.getElementById('searchIcon');
     const searchInput = document.getElementById('searchInput');
     const menuToggle = document.getElementById('menuToggle');
@@ -56,49 +8,110 @@ document.addEventListener('DOMContentLoaded', function () {
     const sliderWrapper = document.querySelector('.slider-wrapper');
     const nextButtons = document.querySelectorAll('.my-slider-next');
     const prevButtons = document.querySelectorAll('.my-slider-prev');
+    const masonryItems = document.querySelectorAll('.masonry-item');
+    const fadeEffect = document.querySelector('#fadeEffect');
+    const expandBtn = document.getElementById('expandButton');
+    const masonryContainer = document.querySelector('.masonry');
 
+    let currentIndex = 0;
+
+    const msnry = new Masonry(masonryContainer, {
+        itemSelector: '.masonry-item',
+        columnWidth: 100,
+        percentPosition: true,
+        gutter: 8,
+    });
+
+    masonryItems.forEach((item, index) => {
+        if (index >= 6) {
+            item.style.display = 'none';
+        }
+    });
+    msnry.layout();
+
+    expandBtn.addEventListener('click', function () {
+        let countShown = 0;
+        masonryItems.forEach((item, index) => {
+            if (item.style.display === 'none' && countShown < 6) {
+                item.style.display = 'block';
+                countShown++;
+            }
+        });
+        msnry.layout();
+
+        if (
+            Array.from(masonryItems).every(
+                (item) => item.style.display !== 'none',
+            )
+        ) {
+            expandBtn.style.display = 'none';
+            fadeEffect.style.display = 'none';
+        }
+    });
+
+    expandBtn.addEventListener('click', function () {
+        let countShown = 0;
+        masonryItems.forEach((item, index) => {
+            if (item.style.display === 'none' && countShown < 6) {
+                item.style.display = 'block';
+                countShown++;
+            }
+        });
+        msnry.layout();
+
+        if (
+            Array.from(masonryItems).every(
+                (item) => item.style.display !== 'none',
+            )
+        ) {
+            expandBtn.style.display = 'none';
+            fadeEffect.style.display = 'none';
+        }
+    });
+
+    lightGallery(masonryContainer, {
+        selector: '.masonry-item',
+    });
+
+    const toggleSearch = () => {
+        searchInput.classList.toggle('w-0');
+        searchInput.classList.toggle('w-40');
+        if (!searchInput.classList.contains('w-0')) {
+            searchInput.focus();
+        }
+    };
+
+    const showMobileMenu = () => {
+        mobileMenu.classList.remove('opacity-0', 'invisible');
+        mobileMenu.classList.add('opacity-100');
+    };
+
+    const hideMobileMenu = () => {
+        mobileMenu.classList.remove('opacity-100');
+        mobileMenu.classList.add('opacity-0', 'invisible');
+    };
+
+    const goToSlide = (index) => {
+        const offset = -index * 100;
+        sliderWrapper.style.transform = `translateX(${offset}%)`;
+        currentIndex = index;
+    };
+
+    const nextSlide = () => {
+        goToSlide((currentIndex + 1) % slides.length);
+    };
+
+    const prevSlide = () => {
+        goToSlide((currentIndex - 1 + slides.length) % slides.length);
+    };
+
+    searchIcon.addEventListener('click', toggleSearch);
+    menuToggle.addEventListener('click', showMobileMenu);
+    closeMenu.addEventListener('click', hideMobileMenu);
     nextButtons.forEach((button) =>
         button.addEventListener('click', nextSlide),
     );
     prevButtons.forEach((button) =>
         button.addEventListener('click', prevSlide),
     );
-
-    let currentIndex = 0;
-
-    function toggleSearch() {
-        searchInput.classList.toggle('w-0');
-        searchInput.classList.toggle('w-40');
-        if (!searchInput.classList.contains('w-0')) {
-            searchInput.focus();
-        }
-    }
-
-    function showMobileMenu() {
-        mobileMenu.classList.remove('opacity-0', 'invisible');
-        mobileMenu.classList.add('opacity-100');
-    }
-
-    function hideMobileMenu() {
-        mobileMenu.classList.remove('opacity-100');
-        mobileMenu.classList.add('opacity-0', 'invisible');
-    }
-
-    function goToSlide(index) {
-        const offset = -index * 100;
-        sliderWrapper.style.transform = `translateX(${offset}%)`;
-        currentIndex = index;
-    }
-
-    function nextSlide() {
-        goToSlide((currentIndex + 1) % slides.length);
-    }
-
-    function prevSlide() {
-        goToSlide((currentIndex - 1 + slides.length) % slides.length);
-    }
-
-    searchIcon.addEventListener('click', toggleSearch);
-    menuToggle.addEventListener('click', showMobileMenu);
-    closeMenu.addEventListener('click', hideMobileMenu);
 });
